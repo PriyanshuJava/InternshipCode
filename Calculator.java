@@ -1,5 +1,4 @@
 //package calculator;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -13,31 +12,23 @@ public class Calculator extends JFrame implements ActionListener
     JButton add,sub,mul,div;
     Calculator()
     {
-        
         setTitle("Simple Calculator");
         setBounds(400,100,400,400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
-        
         c=getContentPane();
         c.setLayout(null);
-        
         label1=new JLabel("First number");
         label1.setBounds(10,30,100,20);
         c.add(label1);
-        
         label2=new JLabel("Second number");
         label2.setBounds(10,70,100,20);
         c.add(label2);
-        
         num1= new JTextField();
         num1.setBounds(120,30,100,20);
         c.add(num1);
-        
         num2= new JTextField();
         num2.setBounds(120,70,100,20);
         c.add(num2);
-        
         add=new JButton("+");
         add.setBounds(10,150,70,40);
         c.add(add);
@@ -49,7 +40,6 @@ public class Calculator extends JFrame implements ActionListener
         mul=new JButton("*");
         mul.setBounds(170,150,70,40);
         c.add(mul);
-        
         div=new JButton("/");
         div.setBounds(250,150,70,40);
         c.add(div);
@@ -68,7 +58,6 @@ public class Calculator extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e ) 
     {
      try{
-       
           if(e.getSource()==add)
       {
           int a=Integer.parseInt(num1.getText());
@@ -102,11 +91,9 @@ public class Calculator extends JFrame implements ActionListener
         }catch(ArithmeticException e2){
           label3.setText("Integers cannot be divided by zero");
         }
-    }   
-
+    }  
    public static void main(String[] args)
    {
       new Calculator();
     }
-    
 }
